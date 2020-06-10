@@ -1,0 +1,266 @@
+body,
+html {
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/xv.png");
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.menuul {
+    list-style: none;
+    width: 100%;
+}
+
+.menuul>li {
+    width: 24%;
+    display: inline-block;
+    text-align: center;
+}
+
+.menuul>li>a {
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+.menuul>li>a:hover{
+    color: rgb(33, 64, 206);
+}
+
+.heard {
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    text-align: center;
+}
+.heard > h3{
+    font-size: 30px;
+    font-family: "標楷體";
+    letter-spacing: 2px;
+    color: rgb(102, 102, 102);
+}
+.heard > h2{
+    font-size: 46px;
+    font-family: "標楷體";
+    letter-spacing: 6px;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgb(100, 100, 100);
+}
+.heard > h2::before{
+    content: "~";
+}
+.heard > h2::after{
+    content: "~";
+}
+.footer {
+    padding-bottom: 20px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.footer>p{
+    color: rgb(83, 83, 83);
+    letter-spacing: 3px;
+    font-family: "微軟正黑體";
+    font-size: 16px;
+}
+
+#app {
+    width: 100%;
+}
+
+
+
+.right {
+    width: 100%;
+
+}
+
+.page {
+    width: 49%;
+    display: inline-block;
+}
+
+.page>h1 {
+    text-align: center;
+}
+
+.bodttitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.circleshadow {
+    z-index: 1;
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    border-radius: 50%;
+    margin: 50px 0px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    height: 400px;
+    margin: 50px 0px;
+    border-radius: 50%;
+    background-color: #eee;
+    box-shadow: 0px 9px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle h2,
+.circle h3 {
+    text-align: center;
+}
+.circle h2{
+    font-size: 35px;
+    color: rgb(65, 65, 65);
+    font-weight: 600;
+    margin-top: 10px;
+}
+.circle h3{
+    font-size: 25px;
+    color: rgb(116, 116, 116);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.content {
+    position: absolute;
+}
+.content>a{
+    color: rgb(61, 61, 61);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.title1,
+.title2 {
+    top: 50px;
+}
+
+.title1 {
+    left: 120px;
+}
+
+.title2 {
+    right: 120px;
+}
+
+.title3,
+.title4 {
+    bottom: 50px;
+}
+
+.title3 {
+    left: 120px;
+}
+
+.title4 {
+    right: 120px;
+}
+
+.circletitle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    /* padding: 20px; */
+    background-color: #fff;
+
+}
+
+.titlecontent1,
+.titlecontent3 {
+    padding-left: 10px;
+    border-radius: 10px 45px 45px 10px;
+}
+
+.titlecontent1::after {
+    content: "01";
+    display: inline-block;
+    padding: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-left: 15px;
+}
+
+.titlecontent3::after {
+    content: "01";
+    display: inline-block;
+    padding: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-left: 15px;
+}
+
+.titlecontent2,
+.titlecontent4 {
+    padding-right: 10px;
+    border-radius: 45px 10px 10px 45px;
+}
+
+.titlecontent2::before {
+    content: "02";
+    display: inline-block;
+    padding: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-right: 15px;
+}
+
+.titlecontent4::before {
+    content: "04";
+    display: inline-block;
+    padding: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-right: 15px;
+}
+
+/* .footer {
+    padding-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+} */

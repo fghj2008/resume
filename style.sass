@@ -1,0 +1,280 @@
+$color_purple_dark: #64638F
+$color_purple: #9795CF
+$color_purple_1: #ABA9E9
+$color_purple_bright: #CBC9FF
+$color_white: white
+$color_skill: #73D2F3
+$color_op: #8987b7
+
+
+@mixin size($w,$h:$w)
+  width: $w
+  height: $h
+
+@mixin center
+  position: absolute
+  top: 50%
+  left: 50% 
+  transform: translateX(-50%,-50%)
+  
+@mixin flex($j:center,$a:center)
+  display: flex
+  justify-content: $j
+  align-items: $a
+// 全部調整
+*
+  // border: 1px solid black
+  font-family: 微軟正黑體
+  // border: 2px solid $color_white
+  
+  
+body,html
+  
+  margin: 0px
+  padding: 0px
+  +flex(center,center)
+  background: linear-gradient(145deg,$color_purple_dark,$color_purple_bright)
+h1
+  display: inline
+  color: $color_white
+  text-shadow: 1px 1px 1px $color_purple_bright, 0 0 15px $color_purple_bright, 0 0 2px $color_purple
+h2
+  margin-top: 80px
+  text-align: center
+  color: $color_white
+  &:after,&:before
+    content: ""
+    display: inline-block
+    width: 30%
+    height: 3px
+    background-color: $color_purple_bright
+    margin: 8px 30px
+h4,h5
+  text-align: center
+  color: $color_white
+  opacity: 0.5
+h4
+  margin-bottom: 40px
+  margin-top: 5px
+
+.hr
+  margin: 30px
+  margin-bottom: 40px
+  border-style: solid
+  height: 5px
+  border: none
+  background-color: $color_purple_bright
+  border-radius: 25%
+  border-color: $color_purple_bright
+p
+  color: $color_white
+  font-weight: 600
+       
+
+ul
+  padding: 0
+  list-style: none
+    
+    
+  
+.body
+  padding: 30px
+  border: 10px solid $color_white
+  margin: 30px
+  max-width: 950px
+  border-radius: 5px
+  
+// 第一段
+.resume>.left
+  flex: 4
+.resume>.right
+  flex: 6
+.resume
+  display: flex
+  .left
+    display: flex
+    flex-direction: column
+    .img
+      flex-shrink: 0
+      flex-grow: 0
+      flex: 100px
+      margin: 3px auto
+      margin-top: 20px
+      border-radius: 15px
+      +size(200px)
+      border: 2px solid $color_white
+      transition: 0.5s
+      &:hover
+        box-shadow: 3px 3px $color_white
+      
+    h1
+      flex: 2
+      text-align: center
+      letter-spacing: 5px
+      margin-bottom: 5px
+    h5
+      margin-top: 0
+      text-align: center
+  .right
+    display: flex
+    flex-direction: column
+    p
+      flex: 6
+      margin: 10px
+      padding: 20px 20px
+      line-height: 35px
+      letter-spacing: 1px
+      padding-bottom: 0
+      margin-bottom: 0
+      
+.line
+  flex: 2
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+.line>a
+  border: 2px solid $color_white
+  width: 70px
+  text-align: center
+  padding: 7px 10px
+  text-decoration: none
+  color: $color_white
+  font-weight: 500
+  transition: 0.5s
+  &:hover
+    background-color: $color_purple_dark
+    border: 2px solid $color_purple_dark
+    color: $color_white
+    font-weight: 600
+    text-shadow: 0 0 1px $color_white
+        
+        
+        
+        
+// 第二段
+
+.listSkill
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+.listSkill li
+  width: 25%
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  color: $color_white
+  font-weight: 600
+  
+
+.circle
+  +size(100px)
+  background-color: $color_skill
+  border-radius: 50%
+  position: relative
+  overflow: hidden
+  background-color: #fff
+  margin-top: 20px
+  &:after
+    content: ""
+    display: block
+    background-color: $color_op
+    width: calc(100% - 30px)
+    height: calc(100% - 30px)
+    border-radius: 50%
+    position: relative
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+    
+.p90,.p180,.p270,.p360
+  +size(50%)
+  position: absolute
+  left: 50%
+  top: 0
+  background-color: $color_skill
+.p180
+  top: 50%
+.p270
+  left: 0
+  top: 50%
+.p360
+  left: 0
+  top: 0
+  
+
+
+
+.Experience>li
+  display: flex
+  color: $color_white
+  font-weight: 600
+  margin: 0px 30px
+  margin-bottom: 20px
+  line-height: 40px
+.Experience>li>ul
+  padding-left: 20px
+  margin-left: 20px
+  border-left: solid 3px $color_purple_bright
+  color: $color_white
+  font-weight: 400
+.Education
+  margin: 0px 30px
+  line-height: 40px
+  color: $color_white
+  font-weight: 600
+h3
+  color: $color_white
+  font-weight: 600
+  
+.listProgram
+  width: 70%
+  margin: auto
+  
+.listProgram .bar
+  +size(350px,8px)
+  border: 4px solid $color_white
+  border-radius: 5px
+  
+.listProgram li
+  padding: 10px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: $color_white
+  font-weight: 600
+.value
+  +size(60%,100%)
+  background-color: $color_skill
+.p10
+  width: 10%
+.p20
+  width: 20%
+.p30
+  width: 30%
+.p40
+  width: 40%
+.p50
+  width: 50%
+.p60
+  width: 60%
+.p80
+  width: 80%
+.p70
+  width: 70%
+.p901
+  width: 90%
+.p100
+  width: 100%
+.slick,.poster
+  overflow: hidden
+  img
+    margin: 10px
+.words
+  transition: 0.5s
+
+  
+  
